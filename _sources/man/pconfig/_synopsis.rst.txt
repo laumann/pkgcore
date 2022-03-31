@@ -1,0 +1,4 @@
+Synopsis
+========
+
+pconfig [-h] [--version] [--debug] [-q] [-v] [--color BOOLEAN] [--config CONFIG_PATH] {classes,describe_class,uncollapsable,dump,configurables,dump-uncollapsed,package,world} ...

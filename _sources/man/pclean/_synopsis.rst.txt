@@ -1,0 +1,4 @@
+Synopsis
+========
+
+pclean [-h] [--version] [--debug] [-q] [-v] [--color BOOLEAN] [--config CONFIG_PATH] [--domain DOMAIN] {config,dist,pkg,tmp} ...

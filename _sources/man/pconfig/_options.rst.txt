@@ -1,0 +1,31 @@
+Base Options
+============
+
+-h, --help       
+                 show this help message and exit
+
+--version        
+                 show this program's version info and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Config Options
+==============
+
+--config CONFIG_PATH  
+                      use custom config or skip loading system config
+
+Subcommands
+===========
+
+configuration related subcommands

@@ -1,0 +1,23 @@
+Positional Arguments
+--------------------
+
+:target_class:  
+              The class to inspect and output details about
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

@@ -1,0 +1,43 @@
+Positional Arguments
+====================
+
+:target:  
+        atom or ebuild matching a pkg to execute phases from
+:phase:   
+        phases to run
+
+Base Options
+============
+
+-h, --help       
+                 show this help message and exit
+
+--version        
+                 show this program's version info and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Config Options
+==============
+
+--config CONFIG_PATH  
+                      use custom config or skip loading system config
+
+--domain DOMAIN       
+                      custom pkgcore domain to use for this operation
+
+Phase Options
+=============
+
+--no-auto  
+           run just the specified phases; it's up to the invoker to get the order right

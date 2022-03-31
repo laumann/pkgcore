@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.fs.ops module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.fs.ops module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.fs.ops">
+<span id="pkgcore-fs-ops-module"></span><h1>pkgcore.fs.ops module<a class="headerlink" href="#module-pkgcore.fs.ops" title="Permalink to this headline">¶</a></h1>
+<p>default fs ops.</p>
+<p>Shouldn’t be accessed directly for the most part, use
+<a class="reference internal" href="pkgcore.plugins.html#module-pkgcore.plugins" title="pkgcore.plugins"><code class="xref py py-mod docutils literal notranslate"><span class="pre">pkgcore.plugins</span></code></a> to get at these ops.</p>
+<dl class="py exception">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.CannotOverwrite">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">CannotOverwrite</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">existing</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#CannotOverwrite"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.CannotOverwrite" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.fs.ops.FailedCopy" title="pkgcore.fs.ops.FailedCopy"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.ops.FailedCopy</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.FailedCopy">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">FailedCopy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#FailedCopy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.FailedCopy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#TypeError" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">TypeError</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.copyfile">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">copyfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mkdirs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#copyfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.copyfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>copy a <code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsBase</span></code> to its stated location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> – <code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsBase</span></code> instance, exempting <code class="xref py py-class docutils literal notranslate"><span class="pre">fsDir</span></code></p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if success, else an exception is thrown</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#EnvironmentError" title="(in Python v3.10)"><strong>EnvironmentError</strong></a> – permission errors</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.do_link">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">do_link</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">trg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#do_link"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.do_link" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.ensure_perms">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">ensure_perms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">d2</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#ensure_perms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.ensure_perms" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enforce a fs objects attributes on the livefs.</p>
+<p>Attributes enforced are permissions, mtime, uid, gid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>d2</strong> – if not None, an fs object for what’s on the livefs now</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True on success, else an exception is thrown</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#EnvironmentError" title="(in Python v3.10)"><strong>EnvironmentError</strong></a> – if fs object attributes can’t be enforced</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.merge_contents">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">merge_contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#merge_contents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.merge_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>merge a <a class="reference internal" href="pkgcore.fs.contents.html#pkgcore.fs.contents.contentsSet" title="pkgcore.fs.contents.contentsSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.contents.contentsSet</span></code></a> instance to the livefs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cset</strong> – <a class="reference internal" href="pkgcore.fs.contents.html#pkgcore.fs.contents.contentsSet" title="pkgcore.fs.contents.contentsSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.contents.contentsSet</span></code></a> instance</p></li>
+<li><p><strong>offset</strong> – if not None, offset to prefix all locations with.
+Think of it as target dir.</p></li>
+<li><p><strong>callback</strong> – callable to report each entry being merged; given a single arg,
+the fs object being merged.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#EnvironmentError" title="(in Python v3.10)"><strong>EnvironmentError</strong></a> – Thrown for permission failures.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.mkdir">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">mkdir</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">d</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#mkdir"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.mkdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>mkdir for a fsDir object</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>d</strong> – <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsDir" title="pkgcore.fs.fs.fsDir"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsDir</span></code></a> instance</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>true if success, else an exception is thrown</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#EnvironmentError" title="(in Python v3.10)"><strong>EnvironmentError</strong></a> – if can’t complete</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.ops.unmerge_contents">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.ops.</span></span><span class="sig-name descname"><span class="pre">unmerge_contents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">offset</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/ops.html#unmerge_contents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.ops.unmerge_contents" title="Permalink to this definition">¶</a></dt>
+<dd><p>unmerge a <a class="reference internal" href="pkgcore.fs.contents.html#pkgcore.fs.contents.contentsSet" title="pkgcore.fs.contents.contentsSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.contents.contentsSet</span></code></a> instance to the livefs</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cset</strong> – <a class="reference internal" href="pkgcore.fs.contents.html#pkgcore.fs.contents.contentsSet" title="pkgcore.fs.contents.contentsSet"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.contents.contentsSet</span></code></a> instance</p></li>
+<li><p><strong>offset</strong> – if not None, offset to prefix all locations with.
+Think of it as target dir.</p></li>
+<li><p><strong>callback</strong> – callable to report each entry being unmerged</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>True, or an exception is thrown on failure
+(OSError, although see copyfile for specifics).</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#EnvironmentError" title="(in Python v3.10)"><strong>EnvironmentError</strong></a> – see <a class="reference internal" href="#pkgcore.fs.ops.copyfile" title="pkgcore.fs.ops.copyfile"><code class="xref py py-func docutils literal notranslate"><span class="pre">copyfile()</span></code></a> and <a class="reference internal" href="#pkgcore.fs.ops.mkdir" title="pkgcore.fs.ops.mkdir"><code class="xref py py-func docutils literal notranslate"><span class="pre">mkdir()</span></code></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.fs.ops module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

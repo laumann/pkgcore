@@ -1,0 +1,5 @@
+.. include:: sync.rst
+.. include:: copy.rst
+.. include:: regen.rst
+.. include:: env-update.rst
+.. include:: eclass.rst

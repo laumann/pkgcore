@@ -1,0 +1,43 @@
+Config Options
+--------------
+
+--domain DOMAIN  
+                 custom pkgcore domain to use for this operation
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Command Modes
+-------------
+
+
+These options are directives for what to do with the world file. You
+can do multiple operations in a single invocation.  For example, you
+can have `--add x11-wm/fluxbox --remove gnome-base/gnome -l` to add
+fluxbox, remove gnome, and list the world file contents all in one
+call.
+    
+
+-l, --list                  
+                            List the current world file contents for this domain.
+
+-r REMOVE, --remove REMOVE  
+                            Remove an entry from the world file.  Can be specified multiple times.
+
+-a ADD, --add ADD           
+                            Add an entry to the world file.  Can be specified multiple times.

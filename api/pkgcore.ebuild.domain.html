@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.ebuild.domain module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.domain module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.ebuild.domain">
+<span id="pkgcore-ebuild-domain-module"></span><h1>pkgcore.ebuild.domain module<a class="headerlink" href="#module-pkgcore.ebuild.domain" title="Permalink to this headline">¶</a></h1>
+<p>gentoo configuration domain</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.domain.</span></span><span class="sig-name descname"><span class="pre">domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">profile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">root</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config_dir</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'/etc/portage'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.config.domain.html#pkgcore.config.domain.domain" title="pkgcore.config.domain.domain"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.config.domain.domain</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.KV">
+<span class="sig-name descname"><span class="pre">KV</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.KV" title="Permalink to this definition">¶</a></dt>
+<dd><p>The version of the running kernel.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.add_repo">
+<span class="sig-name descname"><span class="pre">add_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.add_repo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.add_repo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an external repo to the domain.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_binary_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_binary_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_binary_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to binary_repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_binary_repos_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_binary_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_binary_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to binary_repos_raw.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_binary_repos_unfiltered">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_binary_repos_unfiltered</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_binary_repos_unfiltered" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to binary_repos_unfiltered.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_ebuild_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_ebuild_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_ebuild_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to ebuild_repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_ebuild_repos_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_ebuild_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_ebuild_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to ebuild_repos_raw.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_ebuild_repos_unfiltered">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_ebuild_repos_unfiltered</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_ebuild_repos_unfiltered" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to ebuild_repos_unfiltered.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_installed_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_installed_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_installed_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to installed_repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_installed_repos_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_installed_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_installed_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to installed_repos_raw.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_repos_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to repos_raw.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_source_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_source_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_source_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to source_repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_source_repos_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_source_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_source_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to source_repos_raw.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.all_unfiltered_repos">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_unfiltered_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.all_unfiltered_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to unfiltered_repos.combined</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.arch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">arch</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.arch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.bashrcs">
+<span class="sig-name descname"><span class="pre">bashrcs</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.bashrcs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.binary_repos">
+<span class="sig-name descname"><span class="pre">binary_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.binary_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all binary repos bound with configuration data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.binary_repos_raw">
+<span class="sig-name descname"><span class="pre">binary_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.binary_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all binary repos without filtering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.binary_repos_unfiltered">
+<span class="sig-name descname"><span class="pre">binary_repos_unfiltered</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.binary_repos_unfiltered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all binary repos without package filtering.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.distdir">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">distdir</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.distdir" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.ebuild_repos">
+<span class="sig-name descname"><span class="pre">ebuild_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.ebuild_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all ebuild repos bound with configuration data.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.ebuild_repos_raw">
+<span class="sig-name descname"><span class="pre">ebuild_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.ebuild_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all ebuild repos without filtering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.ebuild_repos_unfiltered">
+<span class="sig-name descname"><span class="pre">ebuild_repos_unfiltered</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.ebuild_repos_unfiltered" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all ebuild repos without package filtering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.enabled_use">
+<span class="sig-name descname"><span class="pre">enabled_use</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.enabled_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.features">
+<span class="sig-name descname"><span class="pre">features</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.features" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.filter_repo">
+<span class="sig-name descname"><span class="pre">filter_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_masks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_unmasks</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_filters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_accept_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_keywords</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.filter_repo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.filter_repo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Filter a configured repo.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.find_repo">
+<span class="sig-name descname"><span class="pre">find_repo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.find_repo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.find_repo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find and add an external repo to the domain given a path.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.forced_use">
+<span class="sig-name descname"><span class="pre">forced_use</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.get_package_bashrcs">
+<span class="sig-name descname"><span class="pre">get_package_bashrcs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.get_package_bashrcs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.get_package_bashrcs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.get_package_domain">
+<span class="sig-name descname"><span class="pre">get_package_domain</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.get_package_domain"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.get_package_domain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get domain object with altered settings from matching package.env entries.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.get_package_use_unconfigured">
+<span class="sig-name descname"><span class="pre">get_package_use_unconfigured</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">for_metadata</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/domain.html#domain.get_package_use_unconfigured"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.domain.domain.get_package_use_unconfigured" title="Permalink to this definition">¶</a></dt>
+<dd><p>Determine use flags for a given package.</p>
+<p>Roughly, this should result in the following, evaluated l-&gt;r: non
+USE_EXPAND; profiles, pkg iuse, global configuration, package.use
+configuration, commandline?  stack profiles + pkg iuse; split it into
+use and use_expanded use; do global configuration + package.use
+configuration overriding of non-use_expand use if global configuration
+has a setting for use_expand.</p>
+<dl>
+<dt>Args:</dt><dd><p>pkg: package object
+for_metadata (bool): if True, we’re doing use flag retrieval for</p>
+<blockquote>
+<div><p>metadata generation; otherwise, we’re just requesting the raw use flags</p>
+</div></blockquote>
+</dd>
+<dt>Returns:</dt><dd><p>Three groups of use flags for the package in the following order:
+immutable flags, enabled flags, and disabled flags.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.installed_repos">
+<span class="sig-name descname"><span class="pre">installed_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.installed_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of configured, installed package repos.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.installed_repos_raw">
+<span class="sig-name descname"><span class="pre">installed_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.installed_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of installed repos without filtering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_accept_keywords">
+<span class="sig-name descname"><span class="pre">pkg_accept_keywords</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_accept_keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_env">
+<span class="sig-name descname"><span class="pre">pkg_env</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_keywords">
+<span class="sig-name descname"><span class="pre">pkg_keywords</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id9"><span class="problematic" id="id10">*</span></a>args, <a href="#id11"><span class="problematic" id="id12">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_licenses">
+<span class="sig-name descname"><span class="pre">pkg_licenses</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_licenses" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id13"><span class="problematic" id="id14">*</span></a>args, <a href="#id15"><span class="problematic" id="id16">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_masks">
+<span class="sig-name descname"><span class="pre">pkg_masks</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_masks" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id17"><span class="problematic" id="id18">*</span></a>args, <a href="#id19"><span class="problematic" id="id20">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_unmasks">
+<span class="sig-name descname"><span class="pre">pkg_unmasks</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_unmasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id21"><span class="problematic" id="id22">*</span></a>args, <a href="#id23"><span class="problematic" id="id24">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkg_use">
+<span class="sig-name descname"><span class="pre">pkg_use</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkg_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id25"><span class="problematic" id="id26">*</span></a>args, <a href="#id27"><span class="problematic" id="id28">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.pm_tmpdir">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pm_tmpdir</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.pm_tmpdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary directory for the package manager.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.repo_configs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repo_configs</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.repo_configs" title="Permalink to this definition">¶</a></dt>
+<dd><p>All defined repo configs.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.repos">
+<span class="sig-name descname"><span class="pre">repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all repos.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.repos_raw">
+<span class="sig-name descname"><span class="pre">repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all repos without filtering.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.settings">
+<span class="sig-name descname"><span class="pre">settings</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.settings" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.source_repos">
+<span class="sig-name descname"><span class="pre">source_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.source_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of configured, filtered package repos.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.source_repos_raw">
+<span class="sig-name descname"><span class="pre">source_repos_raw</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.source_repos_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of package repos without filtering.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.stable_arch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">stable_arch</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.stable_arch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.stable_forced_use">
+<span class="sig-name descname"><span class="pre">stable_forced_use</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.stable_forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.system_profile">
+<span class="sig-name descname"><span class="pre">system_profile</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.system_profile" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id29"><span class="problematic" id="id30">*</span></a>args, <a href="#id31"><span class="problematic" id="id32">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.tmpdir">
+<span class="sig-name descname"><span class="pre">tmpdir</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.tmpdir" title="Permalink to this definition">¶</a></dt>
+<dd><p>Temporary directory for the system.</p>
+<p>Uses PORTAGE_TMPDIR setting and falls back to using the system’s TMPDIR if unset.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.unfiltered_repos">
+<span class="sig-name descname"><span class="pre">unfiltered_repos</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.unfiltered_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Group of all configured repos without filtering.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.unstable_arch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">unstable_arch</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.unstable_arch" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.use">
+<span class="sig-name descname"><span class="pre">use</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.domain.domain.use_expand_re">
+<span class="sig-name descname"><span class="pre">use_expand_re</span></span><a class="headerlink" href="#pkgcore.ebuild.domain.domain.use_expand_re" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.domain module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

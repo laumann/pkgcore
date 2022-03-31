@@ -1,0 +1,41 @@
+Positional Arguments
+--------------------
+
+:eclasses:  
+          eclasses to target
+
+Config Options
+--------------
+
+--domain DOMAIN  
+                 custom pkgcore domain to use for this operation
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Subcommand Options
+------------------
+
+--dir OUTPUT_DIR                            
+                                            output directory
+
+-f {rst,man,html}, --format {rst,man,html}  
+                                            output format
+
+-r REPO, --repo REPO                        
+                                            target repository

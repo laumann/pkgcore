@@ -1,0 +1,41 @@
+Generic Cleaning Options
+------------------------
+
+TARGET                                        
+                                              packages to target for cleaning
+
+-p, --pretend                                 
+                                              dry run without performing any changes
+
+-x EXCLUDE, --exclude EXCLUDE                 
+                                              list of packages to exclude from removal
+
+-X EXCLUDE_FILE, --exclude-file EXCLUDE_FILE  
+                                              path to exclusion file
+
+-S PKGSET, --pkgsets PKGSET                   
+                                              list of pkgsets to include or exclude from removal
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Tmpfile Options
+---------------
+
+-a, --all  
+           wipe the entire tmpdir

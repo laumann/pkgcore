@@ -1,0 +1,235 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.util.commandline module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.util.commandline module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.util.commandline">
+<span id="pkgcore-util-commandline-module"></span><h1>pkgcore.util.commandline module<a class="headerlink" href="#module-pkgcore.util.commandline" title="Permalink to this headline">¶</a></h1>
+<p>Utilities for writing commandline utilities.</p>
+<p>pkgcore scripts should use the <a class="reference internal" href="#pkgcore.util.commandline.ArgumentParser" title="pkgcore.util.commandline.ArgumentParser"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ArgumentParser</span></code></a> subclass here for a
+consistent commandline “look and feel” (and it tries to make life a
+bit easier too). They will probably want to use <code class="xref py py-obj docutils literal notranslate"><span class="pre">main</span></code> from an C{if
+__name__ == ‘__main__’} block too: it will take care of things like
+consistent exception handling.</p>
+<p>See dev-notes/commandline.rst for more complete documentation.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.ArgumentParser">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">ArgumentParser</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">suppress</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">help</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">script</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#ArgumentParser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.ArgumentParser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">snakeoil.cli.arghparse.ArgumentParser</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.BooleanQuery">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">BooleanQuery</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">attrs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">klass_type</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">converter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#BooleanQuery"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.BooleanQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">snakeoil.cli.arghparse.DelayedValue</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.BooleanQuery.invokable">
+<span class="sig-name descname"><span class="pre">invokable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#BooleanQuery.invokable"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.BooleanQuery.invokable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.DomainFromPath">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">DomainFromPath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#DomainFromPath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.DomainFromPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.util.commandline.StoreConfigObject" title="pkgcore.util.commandline.StoreConfigObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.util.commandline.StoreConfigObject</span></code></a></p>
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.NoDefaultConfigError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">NoDefaultConfigError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">argument</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">message</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#NoDefaultConfigError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.NoDefaultConfigError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse.ArgumentError</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreConfigObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">StoreConfigObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreConfigObject"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreConfigObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse._StoreAction</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreConfigObject.default_priority">
+<span class="sig-name descname"><span class="pre">default_priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">20</span></em><a class="headerlink" href="#pkgcore.util.commandline.StoreConfigObject.default_priority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreConfigObject.lazy_load_object">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lazy_load_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">key</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">priority</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreConfigObject.lazy_load_object"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreConfigObject.lazy_load_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreConfigObject.store_all_default">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_all_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreConfigObject.store_all_default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreConfigObject.store_all_default" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreConfigObject.store_default">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">store_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">option_string</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreConfigObject.store_default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreConfigObject.store_default" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreRepoObject">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">StoreRepoObject</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreRepoObject"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreRepoObject" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.util.commandline.StoreConfigObject" title="pkgcore.util.commandline.StoreConfigObject"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.util.commandline.StoreConfigObject</span></code></a></p>
+<p>Load a repo object from the config.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreRepoObject.valid_repo_types">
+<span class="sig-name descname"><span class="pre">valid_repo_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'all':</span> <span class="pre">'repos',</span> <span class="pre">'all-raw':</span> <span class="pre">'repos_raw',</span> <span class="pre">'binary':</span> <span class="pre">'binary_repos',</span> <span class="pre">'binary-raw':</span> <span class="pre">'binary_repos_raw',</span> <span class="pre">'binary-unfiltered':</span> <span class="pre">'binary_repos_unfiltered',</span> <span class="pre">'config':</span> <span class="pre">'repo_configs',</span> <span class="pre">'ebuild':</span> <span class="pre">'ebuild_repos',</span> <span class="pre">'ebuild-raw':</span> <span class="pre">'ebuild_repos_raw',</span> <span class="pre">'ebuild-unfiltered':</span> <span class="pre">'ebuild_repos_unfiltered',</span> <span class="pre">'installed':</span> <span class="pre">'installed_repos',</span> <span class="pre">'installed-raw':</span> <span class="pre">'installed_repos_raw',</span> <span class="pre">'source':</span> <span class="pre">'source_repos',</span> <span class="pre">'source-raw':</span> <span class="pre">'source_repos_raw',</span> <span class="pre">'unfiltered':</span> <span class="pre">'unfiltered_repos'}</span></em><a class="headerlink" href="#pkgcore.util.commandline.StoreRepoObject.valid_repo_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.StoreTarget">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">StoreTarget</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#StoreTarget"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.StoreTarget" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">argparse._AppendAction</span></code></p>
+<p>Parse extended package atom syntax and optionally set arguments.</p>
+<p>Various target arguments are supported including the following:</p>
+<dl class="simple">
+<dt>atom</dt><dd><p>An extended atom syntax is supported, see the related section
+in pkgcore(5).</p>
+</dd>
+<dt>package set</dt><dd><p>Used to define lists of packages, the syntax used for these is
+&#64;pkgset. For example, the &#64;system and &#64;world package sets are
+supported.</p>
+</dd>
+<dt>extended globbing</dt><dd><p>Globbing package names or atoms allows for use cases such as
+<code class="docutils literal notranslate"><span class="pre">'far*'</span></code> (merge every package starting with ‘far’),
+<code class="docutils literal notranslate"><span class="pre">'dev-python/*::gentoo'</span></code> (merge every package in the dev-python
+category from the gentoo repo), or even ‘*’ (merge everything).</p>
+</dd>
+</dl>
+<p>Also, the target ‘-’ allows targets to be read from standard input.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.Tool">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">Tool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">outfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">errfile</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#Tool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.Tool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">snakeoil.cli.tool.Tool</span></code></p>
+<p>pkgcore-specific commandline utility functionality.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.Tool.pre_parse">
+<span class="sig-name descname"><span class="pre">pre_parse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#Tool.pre_parse"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.Tool.pre_parse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pass down pkgcore-specific settings to the bash side.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.convert_to_restrict">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">convert_to_restrict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sequence</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default=&lt;AlwaysBool</span> <span class="pre">always</span> <span class="pre">True</span> <span class="pre">&#64;0x7fb5c4f78e00&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#convert_to_restrict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.convert_to_restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an iterable to a list of atoms, or return the default</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.find_domains_from_path">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">find_domains_from_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#find_domains_from_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.find_domains_from_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.make_query">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">make_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parser</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#make_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.make_query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.python_namespace_type">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">python_namespace_type</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">module</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attribute</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#python_namespace_type"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.python_namespace_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the object from python namespace that value specifies</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – python namespace, snakeoil.modules for example</p></li>
+<li><p><strong>module</strong> – if true, the object must be a module</p></li>
+<li><p><strong>attribute</strong> – if true, the object must be a non-module</p></li>
+</ul>
+</dd>
+<dt class="field-even">Raises</dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the conditions aren’t met, or import fails</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.register_command">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">register_command</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">commands</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">real_type=&lt;class</span> <span class="pre">'type'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#register_command"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.register_command" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.util.commandline.store_config">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.util.commandline.</span></span><span class="sig-name descname"><span class="pre">store_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">namespace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">attr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/util/commandline.html#store_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.util.commandline.store_config" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.util.commandline module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

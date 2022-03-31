@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.cache package &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.cache package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="pkgcore-cache-package">
+<h1>pkgcore.cache package<a class="headerlink" href="#pkgcore-cache-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="pkgcore.cache.errors.html">pkgcore.cache.errors module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pkgcore.cache.flat_hash.html">pkgcore.cache.flat_hash module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pkgcore.cache.fs_template.html">pkgcore.cache.fs_template module</a></li>
+</ul>
+</div>
+</section>
+<section id="module-pkgcore.cache">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-pkgcore.cache" title="Permalink to this headline">¶</a></h2>
+<p>cache subsystem, typically used for storing package metadata</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.cache.base">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.cache.</span></span><span class="sig-name descname"><span class="pre">base</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">auxdbkeys</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readonly</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>autocommits</strong> – Controls whether the template commits every update,
+or queues up updates.</p></li>
+<li><p><strong>cleanse_keys</strong> – Boolean controlling whether the template should drop
+empty keys for storing.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.autocommits">
+<span class="sig-name descname"><span class="pre">autocommits</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pkgcore.cache.base.autocommits" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.chf_type">
+<span class="sig-name descname"><span class="pre">chf_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'mtime'</span></em><a class="headerlink" href="#pkgcore.cache.base.chf_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.cleanse_keys">
+<span class="sig-name descname"><span class="pre">cleanse_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pkgcore.cache.base.cleanse_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.commit">
+<span class="sig-name descname"><span class="pre">commit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.commit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.commit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.deconstruct_eclasses">
+<span class="sig-name descname"><span class="pre">deconstruct_eclasses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">eclass_dict</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.deconstruct_eclasses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.deconstruct_eclasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>takes a dict, returns a string representing said dict</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.default_keys">
+<span class="sig-name descname"><span class="pre">default_keys</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('BDEPEND',</span> <span class="pre">'DEPEND',</span> <span class="pre">'RDEPEND',</span> <span class="pre">'PDEPEND',</span> <span class="pre">'IDEPEND',</span> <span class="pre">'DEFINED_PHASES',</span> <span class="pre">'DESCRIPTION',</span> <span class="pre">'EAPI',</span> <span class="pre">'HOMEPAGE',</span> <span class="pre">'INHERIT',</span> <span class="pre">'INHERITED',</span> <span class="pre">'IUSE',</span> <span class="pre">'KEYWORDS',</span> <span class="pre">'LICENSE',</span> <span class="pre">'PROPERTIES',</span> <span class="pre">'REQUIRED_USE',</span> <span class="pre">'RESTRICT',</span> <span class="pre">'SLOT',</span> <span class="pre">'SRC_URI',</span> <span class="pre">'_eclasses_')</span></em><a class="headerlink" href="#pkgcore.cache.base.default_keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.default_sync_rate">
+<span class="sig-name descname"><span class="pre">default_sync_rate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">1</span></em><a class="headerlink" href="#pkgcore.cache.base.default_sync_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.eclass_chf_deserializers">
+<span class="sig-name descname"><span class="pre">eclass_chf_deserializers</span></span><a class="headerlink" href="#pkgcore.cache.base.eclass_chf_deserializers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.eclass_chf_serializers">
+<span class="sig-name descname"><span class="pre">eclass_chf_serializers</span></span><a class="headerlink" href="#pkgcore.cache.base.eclass_chf_serializers" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.eclass_chf_types">
+<span class="sig-name descname"><span class="pre">eclass_chf_types</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('mtime',)</span></em><a class="headerlink" href="#pkgcore.cache.base.eclass_chf_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.base.eclass_splitter">
+<span class="sig-name descname"><span class="pre">eclass_splitter</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'\t'</span></em><a class="headerlink" href="#pkgcore.cache.base.eclass_splitter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.cache.base.frozen">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">frozen</span></span><a class="headerlink" href="#pkgcore.cache.base.frozen" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to readonly</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.has_key">
+<span class="sig-name descname"><span class="pre">has_key</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.has_key"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.has_key" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.reconstruct_eclasses">
+<span class="sig-name descname"><span class="pre">reconstruct_eclasses</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclass_string</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.reconstruct_eclasses"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.reconstruct_eclasses" title="Permalink to this definition">¶</a></dt>
+<dd><p>Turn a string from <code class="xref py py-obj docutils literal notranslate"><span class="pre">serialize_eclasses</span></code> into a dict.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.set_sync_rate">
+<span class="sig-name descname"><span class="pre">set_sync_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.set_sync_rate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.set_sync_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.base.validate_entry">
+<span class="sig-name descname"><span class="pre">validate_entry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cache_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ebuild_hash_item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclass_db</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#base.validate_entry"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.base.validate_entry" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.cache.bulk">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.cache.</span></span><span class="sig-name descname"><span class="pre">bulk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#bulk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.bulk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.cache.base" title="pkgcore.cache.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.cache.base</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.cache.bulk.commit">
+<span class="sig-name descname"><span class="pre">commit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">force</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/cache.html#bulk.commit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.cache.bulk.commit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.bulk.data">
+<span class="sig-name descname"><span class="pre">data</span></span><a class="headerlink" href="#pkgcore.cache.bulk.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.cache.bulk.default_sync_rate">
+<span class="sig-name descname"><span class="pre">default_sync_rate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">100</span></em><a class="headerlink" href="#pkgcore.cache.bulk.default_sync_rate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">pkgcore.cache package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-pkgcore.cache">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.cache package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

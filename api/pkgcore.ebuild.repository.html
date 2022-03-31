@@ -1,0 +1,361 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.ebuild.repository module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.repository module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.ebuild.repository">
+<span id="pkgcore-ebuild-repository-module"></span><h1>pkgcore.ebuild.repository module<a class="headerlink" href="#module-pkgcore.ebuild.repository" title="Permalink to this headline">¶</a></h1>
+<p>Ebuild repository, specific to gentoo ebuild trees.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ConfiguredTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.repository.</span></span><span class="sig-name descname"><span class="pre">ConfiguredTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">raw_repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">domain_settings</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#ConfiguredTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.ConfiguredTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.repository.configured.html#pkgcore.repository.configured.tree" title="pkgcore.repository.configured.tree"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.repository.configured.tree</span></code></a></p>
+<p>Wrapper around a <a class="reference internal" href="#pkgcore.ebuild.repository.UnconfiguredTree" title="pkgcore.ebuild.repository.UnconfiguredTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UnconfiguredTree</span></code></a> binding build/configuration data (USE).</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ConfiguredTree.config_wrappables">
+<span class="sig-name descname"><span class="pre">config_wrappables</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'bdepend':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'depend':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'distfiles':</span> <span class="pre">'_distfiles',</span> <span class="pre">'fetchables':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'idepend':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'iuse_effective':</span> <span class="pre">'_iuse_effective',</span> <span class="pre">'license':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'pdepend':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'rdepend':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'required_use':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'restrict':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'src_uri':</span> <span class="pre">&lt;function</span> <span class="pre">alias_method.&lt;locals&gt;._asecond_level_call&gt;,</span> <span class="pre">'user_patches':</span> <span class="pre">'_user_patches'}</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.ConfiguredTree.config_wrappables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ConfiguredTree.configurable">
+<span class="sig-name descname"><span class="pre">configurable</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'use'</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.ConfiguredTree.configurable" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.repository.</span></span><span class="sig-name descname"><span class="pre">ProvidesRepo</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkgs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arches</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'package.provided'</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#ProvidesRepo"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.repository.util.html#pkgcore.repository.util.SimpleTree" title="pkgcore.repository.util.SimpleTree"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.repository.util.SimpleTree</span></code></a></p>
+<p>Fake, installed repo populated with entries from package.provided.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvided">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PkgProvided</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arches</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#ProvidesRepo.PkgProvided"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvided" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.ebuild.ebuild_src.html#pkgcore.ebuild.ebuild_src.base" title="pkgcore.ebuild.ebuild_src.base"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.ebuild_src.base</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.arches">
+<span class="sig-name descname"><span class="pre">arches</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.arches" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.keywords">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">keywords</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.keywords" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.package_is_real">
+<span class="sig-name descname"><span class="pre">package_is_real</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.package_is_real" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.use">
+<span class="sig-name descname"><span class="pre">use</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvided.use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.ProvidesRepo.PkgProvidedParent">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">PkgProvidedParent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#ProvidesRepo.PkgProvidedParent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.ProvidesRepo.PkgProvidedParent" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.repository.</span></span><span class="sig-name descname"><span class="pre">UnconfiguredTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclass_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">masters</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mirrors</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_missing_manifests</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">package_cache</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_config</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.repository.prototype.html#pkgcore.repository.prototype.tree" title="pkgcore.repository.prototype.tree"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.repository.prototype.tree</span></code></a></p>
+<p>Raw implementation supporting standard ebuild tree.</p>
+<p>Return packages don’t have USE configuration bound to them.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.aliases">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aliases</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.aliases" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.aliases</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.category_dirs">
+<span class="sig-name descname"><span class="pre">category_dirs</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.category_dirs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.configurables">
+<span class="sig-name descname"><span class="pre">configurables</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">('domain',</span> <span class="pre">'settings')</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.configurables" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.configure">
+<span class="sig-name descname"><span class="pre">configure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree.configure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.configure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a configured form of the repository.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.configured">
+<span class="sig-name descname"><span class="pre">configured</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.configured" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.deprecated">
+<span class="sig-name descname"><span class="pre">deprecated</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>Base deprecated packages restriction from profiles/package.deprecated.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.eapi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eapi</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.eapi" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.eapi</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.enable_gpg">
+<span class="sig-name descname"><span class="pre">enable_gpg</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">False</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.enable_gpg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.extension">
+<span class="sig-name descname"><span class="pre">extension</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'.ebuild'</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.extension" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.external">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">external</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.external" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.external</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.false_categories">
+<span class="sig-name descname"><span class="pre">false_categories</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">frozenset({'eclass',</span> <span class="pre">'licenses',</span> <span class="pre">'metadata',</span> <span class="pre">'profiles'})</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.false_categories" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.is_supported">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_supported</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.is_supported" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.eapi.is_supported</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.itermatch">
+<span class="sig-name descname"><span class="pre">itermatch</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree.itermatch"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.itermatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generator that yields packages match a restriction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>restrict</strong> (<a class="reference internal" href="pkgcore.restrictions.packages.html#pkgcore.restrictions.packages.PackageRestriction" title="pkgcore.restrictions.packages.PackageRestriction"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.restrictions.packages.PackageRestriction</span></code></a>
+instance.) – restriction to search via</p></li>
+<li><p><strong>sorter</strong> – callable to do sorting during searching-
+if sorting the results, use this instead of sorting externally.</p></li>
+<li><p><strong>pkg_filter</strong> – callable to do package filtering</p></li>
+<li><p><strong>versioned</strong> – boolean controlling returning versioned or unversioned pkgs</p></li>
+<li><p><strong>raw_pkg_cls</strong> – custom package class to use for generating raw pkg instances</p></li>
+<li><p><strong>pkg_cls</strong> – custom package class to override raw pkg instances with</p></li>
+<li><p><strong>yield_none</strong> – if True then itermatch will yield None for every
+non-matching package. This is meant for use in combination with
+C{twisted.task.cooperate} or other async uses where itermatch
+should not wait many (wallclock) seconds between yielding
+packages. If you override this method you should yield
+None in long-running loops, strictly calling it for every package
+is not necessary.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.known_arches">
+<span class="sig-name descname"><span class="pre">known_arches</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.known_arches" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return all known arches for a repo (including masters).</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.operations_kls">
+<span class="sig-name descname"><span class="pre">operations_kls</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.operations_kls" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.repository.repo_operations</span></code></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.package_factory">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">package_factory</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cachedb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclass_cache</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mirrors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mirrors</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.package_factory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.package.metadata.html#pkgcore.package.metadata.factory" title="pkgcore.package.metadata.factory"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.package.metadata.factory</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.package_factory.child_class">
+<span class="sig-name descname"><span class="pre">child_class</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.package_factory.child_class" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="pkgcore.ebuild.ebuild_src.html#pkgcore.ebuild.ebuild_src.package" title="pkgcore.ebuild.ebuild_src.package"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.ebuild_src.package</span></code></a></p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.package_factory.get_ebuild_src">
+<span class="sig-name descname"><span class="pre">get_ebuild_src</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.package_factory.get_ebuild_src" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.package_factory.new_package">
+<span class="sig-name descname"><span class="pre">new_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.package_factory.new_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate a new package instance</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.package_factory.priority">
+<span class="sig-name descname"><span class="pre">priority</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.package_factory.priority" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.path_restrict">
+<span class="sig-name descname"><span class="pre">path_restrict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree.path_restrict"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.path_restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a restriction from a given path in a repo.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>path</strong> – full or partial path to an ebuild</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a package restriction matching the given path if possible</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/exceptions.html#ValueError" title="(in Python v3.10)"><strong>ValueError</strong></a> – if the repo doesn’t contain the given path, the
+path relates to a file that isn’t an ebuild, or the ebuild isn’t in the
+proper directory layout</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.pkg_masks">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">pkg_masks</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.pkg_masks" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.pkg_masks</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.rebind">
+<span class="sig-name descname"><span class="pre">rebind</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwds</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree.rebind"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.rebind" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a new tree instance with the same location using new keywords.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>kwds</strong> – see __init__ for valid values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.repo_id">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repo_id</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.repo_id" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.repo_id</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.repo_name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">repo_name</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.repo_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to config.repo_name</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.thirdpartymirrors">
+<span class="sig-name descname"><span class="pre">thirdpartymirrors</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.thirdpartymirrors" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.use_expand_desc">
+<span class="sig-name descname"><span class="pre">use_expand_desc</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.use_expand_desc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherited USE_EXPAND settings for the repo.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.use_expand_sort">
+<span class="sig-name descname"><span class="pre">use_expand_sort</span></span><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.use_expand_sort" title="Permalink to this definition">¶</a></dt>
+<dd><p>Inherited mapping of USE_EXPAND sorting keys for the repo.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.UnconfiguredTree.use_expand_sorter">
+<span class="sig-name descname"><span class="pre">use_expand_sorter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#UnconfiguredTree.use_expand_sorter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.UnconfiguredTree.use_expand_sorter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sorting function for a given USE_EXPAND group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.ebuild.repository.tree">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.repository.</span></span><span class="sig-name descname"><span class="pre">tree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cache=()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eclass_cache=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default_mirrors=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_missing_manifests=False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tree_cls=&lt;class</span> <span class="pre">'pkgcore.ebuild.repository.UnconfiguredTree'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/repository.html#tree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.repository.tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize an unconfigured ebuild repository.</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.repository module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

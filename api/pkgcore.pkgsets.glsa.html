@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.pkgsets.glsa module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.pkgsets.glsa module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.pkgsets.glsa">
+<span id="pkgcore-pkgsets-glsa-module"></span><h1>pkgcore.pkgsets.glsa module<a class="headerlink" href="#module-pkgcore.pkgsets.glsa" title="Permalink to this headline">¶</a></h1>
+<p>Gentoo Linux Security Advisories (GLSA) support</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.pkgsets.glsa.</span></span><span class="sig-name descname"><span class="pre">GlsaDirSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">src</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#GlsaDirSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>generate a pkgset based on GLSA’s distributed via a directory.</p>
+<p>(rsync tree is the usual source.)</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.generate_intersects_from_pkg_node">
+<span class="sig-name descname"><span class="pre">generate_intersects_from_pkg_node</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg_node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tag</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#GlsaDirSet.generate_intersects_from_pkg_node"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.generate_intersects_from_pkg_node" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.generate_restrict_from_range">
+<span class="sig-name descname"><span class="pre">generate_restrict_from_range</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">node</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">negate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#GlsaDirSet.generate_restrict_from_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.generate_restrict_from_range" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.iter_vulnerabilities">
+<span class="sig-name descname"><span class="pre">iter_vulnerabilities</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#GlsaDirSet.iter_vulnerabilities"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.iter_vulnerabilities" title="Permalink to this definition">¶</a></dt>
+<dd><p>generator yielding each GLSA restriction</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.op_translate">
+<span class="sig-name descname"><span class="pre">op_translate</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'eq':</span> <span class="pre">'=',</span> <span class="pre">'ge':</span> <span class="pre">'&gt;=',</span> <span class="pre">'gt':</span> <span class="pre">'&gt;',</span> <span class="pre">'le':</span> <span class="pre">'&lt;=',</span> <span class="pre">'lt':</span> <span class="pre">'&lt;'}</span></em><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.op_translate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.pkg_grouped_iter">
+<span class="sig-name descname"><span class="pre">pkg_grouped_iter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sorter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#GlsaDirSet.pkg_grouped_iter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.pkg_grouped_iter" title="Permalink to this definition">¶</a></dt>
+<dd><p>yield GLSA restrictions grouped by package key</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sorter</strong> – must be either None, or a comparison function</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.GlsaDirSet.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.pkgsets.glsa.GlsaDirSet.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.SecurityUpgrades">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.pkgsets.glsa.</span></span><span class="sig-name descname"><span class="pre">SecurityUpgrades</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ebuild_repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arch</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/pkgsets/glsa.html#SecurityUpgrades"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.pkgsets.glsa.SecurityUpgrades" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Set of packages for available security upgrades.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.pkgsets.glsa.SecurityUpgrades.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.pkgsets.glsa.SecurityUpgrades.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.pkgsets.glsa module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

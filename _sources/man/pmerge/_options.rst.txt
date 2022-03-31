@@ -1,0 +1,125 @@
+Positional Arguments
+====================
+
+:TARGET:  
+        extended package matching
+
+Base Options
+============
+
+-h, --help       
+                 show this help message and exit
+
+--version        
+                 show this program's version info and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Config Options
+==============
+
+--config CONFIG_PATH  
+                      use custom config or skip loading system config
+
+--domain DOMAIN       
+                      custom pkgcore domain to use for this operation
+
+Operations
+==========
+
+-u, --upgrade    
+                 try to upgrade installed pkgs/deps
+
+-d, --downgrade  
+                 try to downgrade installed pkgs/deps
+
+-C, --unmerge    
+                 unmerge packages
+
+--clean          
+                 remove installed packages not referenced by any target pkgs/sets
+
+--list-sets      
+                 display the list of available package sets
+
+Resolver Options
+================
+
+-p, --pretend                                          
+                                                       only perform the dep resolution
+
+-a, --ask                                              
+                                                       ask for user confirmation after dep resolution
+
+-f, --fetchonly                                        
+                                                       do only the fetch steps of the resolved plan
+
+-1, --oneshot                                          
+                                                       do not record changes in the world file
+
+-D, --deep                                             
+                                                       force the resolver to verify installed deps
+
+-N, --newuse                                           
+                                                       add installed pkgs with changed useflags to targets
+
+-i, --ignore-cycles                                    
+                                                       ignore unbreakable dep cycles
+
+--with-bdeps                                           
+                                                       process build deps for built packages
+
+-O, --nodeps                                           
+                                                       disable dependency resolution
+
+-o, --onlydeps                                         
+                                                       only merge the deps of the specified packages
+
+-n, --noreplace                                        
+                                                       don't reinstall target pkgs that are already installed
+
+-b, --buildpkg                                         
+                                                       build binpkgs
+
+-k, --usepkg                                           
+                                                       prefer to use binpkgs
+
+-K, --usepkgonly                                       
+                                                       use only binpkgs
+
+-S, --source-only                                      
+                                                       use only ebuilds, no binpkgs
+
+-e, --empty                                            
+                                                       force rebuilding of all involved packages
+
+-x TARGET[,TARGET,...], --exclude TARGET[,TARGET,...]  
+                                                       inject packages into the installed set
+
+--ignore-failures                                      
+                                                       ignore failures while running all types of tasks
+
+--force                                                
+                                                       force changes to a repo, regardless of if it's frozen
+
+--preload-vdb-state                                    
+                                                       enable preloading of the installed packages database
+
+Output Options
+==============
+
+--quiet-repo-display                 
+                                     use indexes instead of ::repo suffixes in dep resolution output
+
+-F FORMATTER, --formatter FORMATTER  
+                                     output formatter to use

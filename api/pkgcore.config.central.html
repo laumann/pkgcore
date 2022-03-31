@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.config.central module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.config.central module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.config.central">
+<span id="pkgcore-config-central-module"></span><h1>pkgcore.config.central module<a class="headerlink" href="#module-pkgcore.config.central" title="Permalink to this headline">¶</a></h1>
+<p>Collapse multiple config-sources and instantiate from them.</p>
+<p>A lot of extra documentation on this is in dev-notes/config.rst.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.config.central.CollapsedConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.config.central.</span></span><span class="sig-name descname"><span class="pre">CollapsedConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_obj</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">config</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">default</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#CollapsedConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.CollapsedConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>A collapsed config section.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>type</strong> – Our type.</p></li>
+<li><p><strong>config</strong> – The supplied configuration values.</p></li>
+<li><p><strong>debug</strong> – if True exception wrapping is disabled.</p></li>
+<li><p><strong>default</strong> – True if this section is a default.</p></li>
+<li><p><strong>name</strong> – our section name or C{None} for an anonymous section.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.CollapsedConfig.instantiate">
+<span class="sig-name descname"><span class="pre">instantiate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#CollapsedConfig.instantiate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.CollapsedConfig.instantiate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.config.central.</span></span><span class="sig-name descname"><span class="pre">ConfigManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">configs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">debug</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Combine config type definitions and configuration sections.</p>
+<p>Creates instances of a requested type and name by pulling the
+required data from any number of provided configuration sources.</p>
+<dl class="simple">
+<dt>The following special type names are recognized:</dt><dd><ul class="simple">
+<li><p>configsection: instantiated and used the same way as an entry in the
+configs <code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code> arg.</p></li>
+</ul>
+</dd>
+</dl>
+<p>These “magic” typenames are only recognized if they are used by a
+section with a name starting with “autoload”.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.add_config_source">
+<span class="sig-name descname"><span class="pre">add_config_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.add_config_source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.add_config_source" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.collapse_named_section">
+<span class="sig-name descname"><span class="pre">collapse_named_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raise_on_missing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.collapse_named_section"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.collapse_named_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collapse a config by name, possibly returning a cached instance.</p>
+<p>&#64;returns: <a class="reference internal" href="#pkgcore.config.central.CollapsedConfig" title="pkgcore.config.central.CollapsedConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollapsedConfig</span></code></a>.</p>
+<p>If there is no section with this name a ConfigurationError is raised,
+unless raise_on_missing is False in which case None is returned.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.collapse_section">
+<span class="sig-name descname"><span class="pre">collapse_section</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">sections</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.collapse_section"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.collapse_section" title="Permalink to this definition">¶</a></dt>
+<dd><p>Collapse a ConfigSection to a <a class="reference internal" href="#pkgcore.config.central.CollapsedConfig" title="pkgcore.config.central.CollapsedConfig"><code class="xref py py-obj docutils literal notranslate"><span class="pre">CollapsedConfig</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.get_default">
+<span class="sig-name descname"><span class="pre">get_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">type_name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.get_default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.get_default" title="Permalink to this definition">¶</a></dt>
+<dd><p>Finds the configuration specified default obj of type_name.</p>
+<p>Returns C{None} if no defaults.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.reload">
+<span class="sig-name descname"><span class="pre">reload</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.reload"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.reload" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinitialize from the config sources originally passed in.</p>
+<p>This throws away all cached instances and re-executes autoloads.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.sections">
+<span class="sig-name descname"><span class="pre">sections</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.sections"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.sections" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an iterator of all section names.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.types">
+<span class="sig-name descname"><span class="pre">types</span></span><a class="headerlink" href="#pkgcore.config.central.ConfigManager.types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.config.central.ConfigManager.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/config/central.html#ConfigManager.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.config.central.ConfigManager.update" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reinitialize using an additional supplied config.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.config.central module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

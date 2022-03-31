@@ -1,0 +1,23 @@
+Positional Arguments
+--------------------
+
+:typename:  
+          if specified, limit output to just config directives of this type (defaults to showing all types)
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

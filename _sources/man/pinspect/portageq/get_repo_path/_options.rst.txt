@@ -1,0 +1,34 @@
+Positional Arguments
+~~~~~~~~~~~~~~~~~~~~
+
+:root:     
+         the domain that lives at root will be used
+:repo_id:  
+         repo_id to inspect
+
+Options
+~~~~~~~
+
+--eapi ATOM_KLS  
+                 limit all operations to just what the given EAPI supports.
+
+--use USE        
+                 override the use flags used for transititive USE deps- dev-lang/python[threads=] for example
+
+Base Options
+~~~~~~~~~~~~
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

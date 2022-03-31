@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.ebuild.portage_conf module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.portage_conf module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.ebuild.portage_conf">
+<span id="pkgcore-ebuild-portage-conf-module"></span><h1>pkgcore.ebuild.portage_conf module<a class="headerlink" href="#module-pkgcore.ebuild.portage_conf" title="Permalink to this headline">¶</a></h1>
+<p>make.conf translator.</p>
+<p>Converts portage config files into <a class="reference internal" href="pkgcore.config.html#module-pkgcore.config" title="pkgcore.config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.config</span></code></a> form.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.portage_conf.PortageConfig">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.portage_conf.</span></span><span class="sig-name descname"><span class="pre">PortageConfig</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile_override</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/portage_conf.html#PortageConfig"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.portage_conf.PortageConfig" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">snakeoil.mappings.DictMixin</span></code></p>
+<p>Support for portage’s config file layout.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.portage_conf.PortageConfig.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">keys</span></span></span><a class="reference internal" href="../_modules/pkgcore/ebuild/portage_conf.html#PortageConfig.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.portage_conf.PortageConfig.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.portage_conf.PortageConfig.load_make_conf">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_make_conf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">vars_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_sourcing</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">required</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">allow_recurse</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">incrementals</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/portage_conf.html#PortageConfig.load_make_conf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.portage_conf.PortageConfig.load_make_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>parse make.conf files</p>
+<dl>
+<dt>Args:</dt><dd><p>vars_dict (dict): dictionary to add parsed variables to
+path (str): path to the make.conf which can be a regular file or</p>
+<blockquote>
+<div><p>directory, if a directory is passed all the non-hidden files within
+that directory are parsed in alphabetical order.</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.portage_conf.PortageConfig.load_repos_conf">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">load_repos_conf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/portage_conf.html#PortageConfig.load_repos_conf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.portage_conf.PortageConfig.load_repos_conf" title="Permalink to this definition">¶</a></dt>
+<dd><p>parse repos.conf files</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>path (str): path to the repos.conf which can be a regular file or</dt><dd><p>directory, if a directory is passed all the non-hidden files within
+that directory are parsed in alphabetical order.</p>
+</dd>
+</dl>
+</dd>
+<dt>Returns:</dt><dd><p>dict: global repo settings
+dict: repo settings</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.ebuild.portage_conf.SecurityUpgradesViaProfile">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.portage_conf.</span></span><span class="sig-name descname"><span class="pre">SecurityUpgradesViaProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ebuild_repo</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">vdb</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/portage_conf.html#SecurityUpgradesViaProfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.portage_conf.SecurityUpgradesViaProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>generate a GLSA vuln. pkgset limited by profile</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>ebuild_repo (<a class="reference internal" href="pkgcore.ebuild.repository.html#pkgcore.ebuild.repository.UnconfiguredTree" title="pkgcore.ebuild.repository.UnconfiguredTree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.ebuild.repository.UnconfiguredTree</span></code></a>): target repo
+vdb (<a class="reference internal" href="pkgcore.repository.prototype.html#pkgcore.repository.prototype.tree" title="pkgcore.repository.prototype.tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.repository.prototype.tree</span></code></a>): livefs
+profile (<a class="reference internal" href="pkgcore.ebuild.profiles.html#module-pkgcore.ebuild.profiles" title="pkgcore.ebuild.profiles"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.ebuild.profiles</span></code></a>): target profile</p>
+</dd>
+<dt>Returns:</dt><dd><p>pkgset of relevant security upgrades</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.portage_conf module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

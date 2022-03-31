@@ -1,0 +1,203 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.repository.util module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.repository.util module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.repository.util">
+<span id="pkgcore-repository-util-module"></span><h1>pkgcore.repository.util module<a class="headerlink" href="#module-pkgcore.repository.util" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.repository.util.</span></span><span class="sig-name descname"><span class="pre">RepositoryGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repos</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">combined</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">snakeoil.mappings.DictMixin</span></code></p>
+<p>Group of repos as a single unit.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>repos (iterable): repo instances
+combined: combined repo, if None a multiplex repo is created</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.change_repos">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">change_repos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup.change_repos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.change_repos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.has_match">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">has_match</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.has_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to combined.has_match</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.items">
+<span class="sig-name descname"><span class="pre">items</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">items</span></span></span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup.items"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.items" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.itermatch">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">itermatch</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.itermatch" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to combined.itermatch</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.keys">
+<span class="sig-name descname"><span class="pre">keys</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">a</span> <span class="pre">set-like</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">keys</span></span></span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup.keys"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.keys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.match">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">match</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.match" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to combined.match</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.path_restrict">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">path_restrict</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.path_restrict" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to combined.path_restrict</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.real">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">real</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.real" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.repo_match">
+<span class="sig-name descname"><span class="pre">repo_match</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup.repo_match"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.repo_match" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the repo containing a path.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>path (str): path in the filesystem</p>
+</dd>
+<dt>Returns:</dt><dd><p>repo object if a matching repo is found, otherwise None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.values">
+<span class="sig-name descname"><span class="pre">values</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">an</span> <span class="pre">object</span> <span class="pre">providing</span> <span class="pre">a</span> <span class="pre">view</span> <span class="pre">on</span> <span class="pre">D's</span> <span class="pre">values</span></span></span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#RepositoryGroup.values"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.values" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.repository.util.RepositoryGroup.virtual">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">virtual</span></span><a class="headerlink" href="#pkgcore.repository.util.RepositoryGroup.virtual" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.repository.util.SimpleTree">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.repository.util.</span></span><span class="sig-name descname"><span class="pre">SimpleTree</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">cpv_dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">pkg_klass</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">livefs</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">frozen</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">repo_id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#SimpleTree"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.SimpleTree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.repository.prototype.html#pkgcore.repository.prototype.tree" title="pkgcore.repository.prototype.tree"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.repository.prototype.tree</span></code></a></p>
+<p>Fake, in-memory repository.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>cpv_dict (dict): CPVs to populate the repo with
+pkg_klass: class of packages in repo
+livefs (bool): regular repo if False, vdb if True
+frozen (bool): repo is modifiable if False, otherwise readonly
+repo_id (str): repo ID</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.SimpleTree.notify_add_package">
+<span class="sig-name descname"><span class="pre">notify_add_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#SimpleTree.notify_add_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.SimpleTree.notify_add_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>internal function</p>
+<p>notify the repository that a pkg is being added to it</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.repository.util.SimpleTree.notify_remove_package">
+<span class="sig-name descname"><span class="pre">notify_remove_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pkg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#SimpleTree.notify_remove_package"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.SimpleTree.notify_remove_package" title="Permalink to this definition">¶</a></dt>
+<dd><p>internal function</p>
+<p>notify the repository that a pkg it provides is being removed</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.repository.util.get_raw_repos">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.repository.util.</span></span><span class="sig-name descname"><span class="pre">get_raw_repos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repos</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#get_raw_repos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.get_raw_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of raw repos found.</p>
+<p>repos can be either a repo instance, or a list of repos</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.repository.util.get_virtual_repos">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.repository.util.</span></span><span class="sig-name descname"><span class="pre">get_virtual_repos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repos</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sentinel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/repository/util.html#get_virtual_repos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.repository.util.get_virtual_repos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Select only virtual repos.</p>
+<p>repos can be either a list of repos, or a repo to descend through.
+if sentinel is False, will select all non virtual repos</p>
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.repository.util module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

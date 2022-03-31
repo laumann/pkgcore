@@ -1,0 +1,169 @@
+Base Options
+============
+
+-h, --help       
+                 show this help message and exit
+
+--version        
+                 show this program's version info and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Config Options
+==============
+
+--config CONFIG_PATH  
+                      use custom config or skip loading system config
+
+--domain DOMAIN       
+                      custom pkgcore domain to use for this operation
+
+Repository Matching Options
+===========================
+
+options controlling which repos to inspect
+
+--raw                      
+                           disable configuration filtering
+
+--unfiltered               
+                           disable all license and visibility filtering
+
+--virtuals {only,disable}  
+                           only match virtuals or disable virtuals matching entirely
+
+-r REPO, --repo REPO       
+                           repo to search (default from domain if omitted)
+
+-E, --ebuild-repos         
+                           search all ebuild repos
+
+-B, --binary-repos         
+                           search all binary repos
+
+-I, --installed            
+                           search installed packages
+
+-A, --all-repos            
+                           search all repos
+
+Package Matching Options
+========================
+
+TARGET                                       
+                                             extended atom matching of pkgs
+
+--all                                        
+                                             match all packages
+
+--has-use has_use                            
+                                             exact string match on a USE flag
+
+--license license                            
+                                             exact match on a license
+
+--revdep REVDEP                              
+                                             shorthand for --restrict-revdep atom --print-revdep atom
+
+--revdep-pkgs REVDEP_PKGS                    
+                                             shorthand for --restrict-revdep-pkgs atom --print-revdep atom
+
+--restrict-revdep restrict_revdep            
+                                             dependency on an atom
+
+--restrict-revdep-pkgs restrict_revdep_pkgs  
+                                             dependency on pkgs that match a specific atom
+
+-S description, --description description    
+                                             regexp search on description and longdescription
+
+--eapi eapi                                  
+                                             match packages using a given EAPI
+
+--owns owns                                  
+                                             exact match on an owned file/dir
+
+--owns-re owns_re                            
+                                             like "owns" but using a regexp for matching
+
+--maintainer maintainer                      
+                                             comma-separated list of regexes to search for maintainers
+
+--maintainer-name maintainer_name            
+                                             comma-separated list of maintainer name regexes to search for
+
+--maintainer-email maintainer_email          
+                                             comma-separated list of maintainer email regexes to search for
+
+--environment environment                    
+                                             regexp search in environment.bz2
+
+--pkgset pkgset                              
+                                             find packages that match the given package set (world for example)
+
+-u, --upgrade                                
+                                             match installed packages without best slotted version
+
+Output Options
+==============
+
+-1, --first                    
+                               stop when first match is found
+
+-a, --atom                     
+                               print =cat/pkg-3 instead of cat/pkg-3.
+
+--cpv                          
+                               print the category/package-version
+
+-R                             
+                               print the repo of the package
+
+--slot                         
+                               print the slot of the package
+
+-n, --no-version               
+                               collapse multiple matching versions together
+
+--min                          
+                               show only the lowest version for each package
+
+--max                          
+                               show only the highest version for each package
+
+--blame                        
+                               shorthand for --attr maintainers
+
+--size                         
+                               display size of all files owned by the package
+
+--contents                     
+                               list files owned by the package
+
+--highlight-dep HIGHLIGHT_DEP  
+                               highlight dependencies matching this atom
+
+--print-revdep PRINT_REVDEP    
+                               print what condition(s) trigger a dep
+
+--attr attribute               
+                               print this attribute's value (can be specified more than once)
+
+--force-attr attribute         
+                               like --attr but accepts any string as attribute name instead of only explicitly supported names
+
+--one-attr attribute           
+                               print one attribute, suppresses other output
+
+--force-one-attr attribute     
+                               like --one-attr but accepts any string as attribute name instead of only explicitly supported names

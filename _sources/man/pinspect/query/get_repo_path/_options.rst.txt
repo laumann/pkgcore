@@ -1,0 +1,38 @@
+Positional Arguments
+~~~~~~~~~~~~~~~~~~~~
+
+:repo_id:  
+         repo_id to inspect
+
+Options
+~~~~~~~
+
+--eapi ATOM_KLS          
+                         limit all operations to just what the given EAPI supports.
+
+--use USE                
+                         override the use flags used for transititive USE deps- dev-lang/python[threads=] for example
+
+--domain DOMAIN          
+                         custom pkgcore domain to use for this operation
+
+--domain-at-root DOMAIN  
+                         specify the domain to use via its root path
+
+Base Options
+~~~~~~~~~~~~
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

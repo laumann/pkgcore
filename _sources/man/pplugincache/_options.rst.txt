@@ -1,0 +1,23 @@
+Positional Arguments
+====================
+
+:packages:  
+          python namespace(s) to regenerate plugins for.  If none are specified, pkgcore.plugins is updated
+
+Base Options
+============
+
+-h, --help     
+               show this help message and exit
+
+--version      
+               show this program's version info and exit
+
+--debug        
+               enable debugging checks
+
+-q, --quiet    
+               suppress non-error messages
+
+-v, --verbose  
+               show verbose output

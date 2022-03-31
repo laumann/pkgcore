@@ -1,0 +1,4 @@
+Synopsis
+========
+
+pmaint [-h] [--version] [--debug] [-q] [-v] [--color BOOLEAN] [--config CONFIG_PATH] {sync,copy,regen,env-update,eclass} ...

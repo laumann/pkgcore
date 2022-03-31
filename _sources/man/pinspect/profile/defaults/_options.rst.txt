@@ -1,0 +1,25 @@
+Positional Arguments
+~~~~~~~~~~~~~~~~~~~~
+
+:profile:    
+           path to the profile to inspect
+:variables:  
+           if not specified, all settings are displayed. If given, output is limited to just those settings if they exist
+
+Base Options
+~~~~~~~~~~~~
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

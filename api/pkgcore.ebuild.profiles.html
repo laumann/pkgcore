@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.ebuild.profiles module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.profiles module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.ebuild.profiles">
+<span id="pkgcore-ebuild-profiles-module"></span><h1>pkgcore.ebuild.profiles module<a class="headerlink" href="#module-pkgcore.ebuild.profiles" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.profiles.</span></span><span class="sig-name descname"><span class="pre">EmptyRootNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#EmptyRootNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.ebuild.profiles.ProfileNode" title="pkgcore.ebuild.profiles.ProfileNode"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.profiles.ProfileNode</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.deprecated">
+<span class="sig-name descname"><span class="pre">deprecated</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.forced_use">
+<span class="sig-name descname"><span class="pre">forced_use</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.ebuild.misc.ChunkedDataDict</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.masked_use">
+<span class="sig-name descname"><span class="pre">masked_use</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.ebuild.misc.ChunkedDataDict</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.masked_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.parents">
+<span class="sig-name descname"><span class="pre">parents</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">()</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.parents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.pkg_provided">
+<span class="sig-name descname"><span class="pre">pkg_provided</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">((),</span> <span class="pre">())</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.pkg_provided" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.pkg_use">
+<span class="sig-name descname"><span class="pre">pkg_use</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.ebuild.misc.ChunkedDataDict</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.pkg_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.pkg_use_force">
+<span class="sig-name descname"><span class="pre">pkg_use_force</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.pkg_use_force" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.pkg_use_mask">
+<span class="sig-name descname"><span class="pre">pkg_use_mask</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.pkg_use_mask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.profile_set">
+<span class="sig-name descname"><span class="pre">profile_set</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">((),</span> <span class="pre">())</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.profile_set" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.stable_forced_use">
+<span class="sig-name descname"><span class="pre">stable_forced_use</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.ebuild.misc.ChunkedDataDict</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.stable_forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.stable_masked_use">
+<span class="sig-name descname"><span class="pre">stable_masked_use</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.ebuild.misc.ChunkedDataDict</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.stable_masked_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.EmptyRootNode.system">
+<span class="sig-name descname"><span class="pre">system</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">((),</span> <span class="pre">())</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.EmptyRootNode.system" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.OnDiskProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.profiles.</span></span><span class="sig-name descname"><span class="pre">OnDiskProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">basepath</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">profile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_profile_base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#OnDiskProfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.OnDiskProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.profiles.ProfileStack</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.OnDiskProfile.from_abspath">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_abspath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#OnDiskProfile.from_abspath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.OnDiskProfile.from_abspath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.OnDiskProfile.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.OnDiskProfile.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.OnDiskProfile.split_abspath">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">split_abspath</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#OnDiskProfile.split_abspath"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.OnDiskProfile.split_abspath" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.OnDiskProfile.stack">
+<span class="sig-name descname"><span class="pre">stack</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.OnDiskProfile.stack" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py exception">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.profiles.</span></span><span class="sig-name descname"><span class="pre">ProfileError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filename</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#ProfileError"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pkgcore.config.errors.html#pkgcore.config.errors.ParsingError" title="pkgcore.config.errors.ParsingError"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.config.errors.ParsingError</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.profiles.</span></span><span class="sig-name descname"><span class="pre">ProfileNode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#ProfileNode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.accept_keywords">
+<span class="sig-name descname"><span class="pre">accept_keywords</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.accept_keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id1"><span class="problematic" id="id2">*</span></a>args, <a href="#id3"><span class="problematic" id="id4">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.bashrc">
+<span class="sig-name descname"><span class="pre">bashrc</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.bashrc" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.default_env">
+<span class="sig-name descname"><span class="pre">default_env</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.default_env" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id5"><span class="problematic" id="id6">*</span></a>args, <a href="#id7"><span class="problematic" id="id8">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.deprecated">
+<span class="sig-name descname"><span class="pre">deprecated</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id9"><span class="problematic" id="id10">*</span></a>args, <a href="#id11"><span class="problematic" id="id12">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.eapi">
+<span class="sig-name descname"><span class="pre">eapi</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.eapi" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id13"><span class="problematic" id="id14">*</span></a>args, <a href="#id15"><span class="problematic" id="id16">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.eapi_atom">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">eapi_atom</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.eapi_atom" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to eapi.atom_kls</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.forced_use">
+<span class="sig-name descname"><span class="pre">forced_use</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.keywords">
+<span class="sig-name descname"><span class="pre">keywords</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.keywords" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id17"><span class="problematic" id="id18">*</span></a>args, <a href="#id19"><span class="problematic" id="id20">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.make_defaults">
+<span class="sig-name descname"><span class="pre">make_defaults</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.make_defaults" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id21"><span class="problematic" id="id22">*</span></a>args, <a href="#id23"><span class="problematic" id="id24">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.masked_use">
+<span class="sig-name descname"><span class="pre">masked_use</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.masked_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.masks">
+<span class="sig-name descname"><span class="pre">masks</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.masks" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id25"><span class="problematic" id="id26">*</span></a>args, <a href="#id27"><span class="problematic" id="id28">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.name">
+<span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Relative path to the profile from the profiles directory.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.packages">
+<span class="sig-name descname"><span class="pre">packages</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.packages" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id29"><span class="problematic" id="id30">*</span></a>args, <a href="#id31"><span class="problematic" id="id32">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.parent_paths">
+<span class="sig-name descname"><span class="pre">parent_paths</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.parent_paths" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id33"><span class="problematic" id="id34">*</span></a>args, <a href="#id35"><span class="problematic" id="id36">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.parents">
+<span class="sig-name descname"><span class="pre">parents</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.parents" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_deprecated">
+<span class="sig-name descname"><span class="pre">pkg_deprecated</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_deprecated" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id37"><span class="problematic" id="id38">*</span></a>args, <a href="#id39"><span class="problematic" id="id40">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_provided">
+<span class="sig-name descname"><span class="pre">pkg_provided</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_provided" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id41"><span class="problematic" id="id42">*</span></a>args, <a href="#id43"><span class="problematic" id="id44">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_use">
+<span class="sig-name descname"><span class="pre">pkg_use</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_use" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id45"><span class="problematic" id="id46">*</span></a>args, <a href="#id47"><span class="problematic" id="id48">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_use_force">
+<span class="sig-name descname"><span class="pre">pkg_use_force</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_use_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id49"><span class="problematic" id="id50">*</span></a>args, <a href="#id51"><span class="problematic" id="id52">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_use_mask">
+<span class="sig-name descname"><span class="pre">pkg_use_mask</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_use_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id53"><span class="problematic" id="id54">*</span></a>args, <a href="#id55"><span class="problematic" id="id56">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_use_stable_force">
+<span class="sig-name descname"><span class="pre">pkg_use_stable_force</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_use_stable_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id57"><span class="problematic" id="id58">*</span></a>args, <a href="#id59"><span class="problematic" id="id60">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.pkg_use_stable_mask">
+<span class="sig-name descname"><span class="pre">pkg_use_stable_mask</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.pkg_use_stable_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id61"><span class="problematic" id="id62">*</span></a>args, <a href="#id63"><span class="problematic" id="id64">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.profile_set">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">profile_set</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.profile_set" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to packages.profile</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.repoconfig">
+<span class="sig-name descname"><span class="pre">repoconfig</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.repoconfig" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.stable_forced_use">
+<span class="sig-name descname"><span class="pre">stable_forced_use</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.stable_forced_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.stable_masked_use">
+<span class="sig-name descname"><span class="pre">stable_masked_use</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.stable_masked_use" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.system">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">system</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.system" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias to packages.system</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.unmasks">
+<span class="sig-name descname"><span class="pre">unmasks</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.unmasks" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id65"><span class="problematic" id="id66">*</span></a>args, <a href="#id67"><span class="problematic" id="id68">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.use_force">
+<span class="sig-name descname"><span class="pre">use_force</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.use_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id69"><span class="problematic" id="id70">*</span></a>args, <a href="#id71"><span class="problematic" id="id72">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.use_mask">
+<span class="sig-name descname"><span class="pre">use_mask</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.use_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id73"><span class="problematic" id="id74">*</span></a>args, <a href="#id75"><span class="problematic" id="id76">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.use_stable_force">
+<span class="sig-name descname"><span class="pre">use_stable_force</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.use_stable_force" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id77"><span class="problematic" id="id78">*</span></a>args, <a href="#id79"><span class="problematic" id="id80">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.ProfileNode.use_stable_mask">
+<span class="sig-name descname"><span class="pre">use_stable_mask</span></span><a class="headerlink" href="#pkgcore.ebuild.profiles.ProfileNode.use_stable_mask" title="Permalink to this definition">¶</a></dt>
+<dd><p>partial(func, <a href="#id81"><span class="problematic" id="id82">*</span></a>args, <a href="#id83"><span class="problematic" id="id84">**</span></a>keywords) - new function with partial application
+of the given arguments and keywords.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.UserProfile">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.ebuild.profiles.</span></span><span class="sig-name descname"><span class="pre">UserProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">user_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">parent_profile</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">load_profile_base</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/ebuild/profiles.html#UserProfile"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.ebuild.profiles.UserProfile" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.ebuild.profiles.OnDiskProfile" title="pkgcore.ebuild.profiles.OnDiskProfile"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.ebuild.profiles.OnDiskProfile</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="pkgcore.ebuild.profiles.UserProfile.pkgcore_config_type">
+<span class="sig-name descname"><span class="pre">pkgcore_config_type</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">&lt;pkgcore.config.hint.ConfigHint</span> <span class="pre">object&gt;</span></em><a class="headerlink" href="#pkgcore.ebuild.profiles.UserProfile.pkgcore_config_type" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.ebuild.profiles module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

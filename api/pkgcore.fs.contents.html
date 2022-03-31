@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>pkgcore.fs.contents module &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.fs.contents module</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="module-pkgcore.fs.contents">
+<span id="pkgcore-fs-contents-module"></span><h1>pkgcore.fs.contents module<a class="headerlink" href="#module-pkgcore.fs.contents" title="Permalink to this headline">¶</a></h1>
+<p>contents set- container of fs objects</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.OrderedContentsSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.fs.contents.</span></span><span class="sig-name descname"><span class="pre">OrderedContentsSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_missing_directories</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#OrderedContentsSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.OrderedContentsSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#pkgcore.fs.contents.contentsSet" title="pkgcore.fs.contents.contentsSet"><code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.contents.contentsSet</span></code></a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.change_offset_rewriter">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.contents.</span></span><span class="sig-name descname"><span class="pre">change_offset_rewriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">orig_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#change_offset_rewriter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.change_offset_rewriter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.check_instance">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.contents.</span></span><span class="sig-name descname"><span class="pre">check_instance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#check_instance"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.check_instance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pkgcore.fs.contents.</span></span><span class="sig-name descname"><span class="pre">contentsSet</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">initial</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mutable</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3/library/functions.html#object" title="(in Python v3.10)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>set of <code class="xref py py-class docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsBase</span></code> objects</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.add">
+<span class="sig-name descname"><span class="pre">add</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.add"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.add" title="Permalink to this definition">¶</a></dt>
+<dd><p>add a new fs obj to the set</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>obj</strong> – must be a derivative of <code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsBase</span></code></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.add_missing_directories">
+<span class="sig-name descname"><span class="pre">add_missing_directories</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">509</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">uid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gid</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mtime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.add_missing_directories"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.add_missing_directories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ensure that a directory node exists for each path; add if missing.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.change_offset">
+<span class="sig-name descname"><span class="pre">change_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">old_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.change_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.change_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.child_nodes">
+<span class="sig-name descname"><span class="pre">child_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.child_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.child_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return a clone of this instance, w/ just the child nodes returned
+from <cite>iter_child_nodes</cite>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>start_point</strong> – fs filepath all yielded nodes must be within.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.clear">
+<span class="sig-name descname"><span class="pre">clear</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.clear"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.clear" title="Permalink to this definition">¶</a></dt>
+<dd><p>clear the set
+:raise ttributeError: if the instance is frozen</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.clone">
+<span class="sig-name descname"><span class="pre">clone</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">empty</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.clone"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.clone" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.devs">
+<span class="sig-name descname"><span class="pre">devs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.devs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.devs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsDev" title="pkgcore.fs.fs.fsDev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsDev</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a
+fsDev instance, else yields just fsDev.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.difference">
+<span class="sig-name descname"><span class="pre">difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.difference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.difference_update">
+<span class="sig-name descname"><span class="pre">difference_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.difference_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.difference_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.dirs">
+<span class="sig-name descname"><span class="pre">dirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.dirs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.dirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsDir" title="pkgcore.fs.fs.fsDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsDir</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a
+fsDir instance, else yields just fsDir.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.discard">
+<span class="sig-name descname"><span class="pre">discard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.discard"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.discard" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.fifos">
+<span class="sig-name descname"><span class="pre">fifos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.fifos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.fifos" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsFifo" title="pkgcore.fs.fs.fsFifo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsFifo</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a
+fsFifo instance, else yields just fsFifo.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.files">
+<span class="sig-name descname"><span class="pre">files</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.files"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.files" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsFile" title="pkgcore.fs.fs.fsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsFile</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a
+fsFile instance, else yields just fsFile.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.inode_map">
+<span class="sig-name descname"><span class="pre">inode_map</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.inode_map"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.inode_map" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.insert_offset">
+<span class="sig-name descname"><span class="pre">insert_offset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">offset</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.insert_offset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.insert_offset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.intersection">
+<span class="sig-name descname"><span class="pre">intersection</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.intersection"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.intersection" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.intersection_update">
+<span class="sig-name descname"><span class="pre">intersection_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.intersection_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.intersection_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.isdisjoint">
+<span class="sig-name descname"><span class="pre">isdisjoint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.isdisjoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.isdisjoint" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.issubset">
+<span class="sig-name descname"><span class="pre">issubset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.issubset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.issubset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.issuperset">
+<span class="sig-name descname"><span class="pre">issuperset</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.issuperset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.issuperset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iter_child_nodes">
+<span class="sig-name descname"><span class="pre">iter_child_nodes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">start_point</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.iter_child_nodes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iter_child_nodes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Yield a stream of nodes that are fs entries contained within the
+passed in start point.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>start_point</strong> – fs filepath all yielded nodes must be within.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iterdevs">
+<span class="sig-name descname"><span class="pre">iterdevs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.iterdevs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iterdevs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator yielding just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsDev" title="pkgcore.fs.fs.fsDev"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsDev</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a fsDev instance,
+else yields just fsDev instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iterdirs">
+<span class="sig-name descname"><span class="pre">iterdirs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.iterdirs"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iterdirs" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator yielding just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsDir" title="pkgcore.fs.fs.fsDir"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsDir</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a fsDir instance,
+else yields just fsDir instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iterfifos">
+<span class="sig-name descname"><span class="pre">iterfifos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.iterfifos"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iterfifos" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator yielding just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsFifo" title="pkgcore.fs.fs.fsFifo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsFifo</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a fsFifo instance,
+else yields just fsFifo instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iterfiles">
+<span class="sig-name descname"><span class="pre">iterfiles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.iterfiles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iterfiles" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator yielding just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsFile" title="pkgcore.fs.fs.fsFile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsFile</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a fsFile instance,
+else yields just fsFile instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.iterlinks">
+<span class="sig-name descname"><span class="pre">iterlinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.iterlinks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method alias to invoke <a class="reference internal" href="#pkgcore.fs.contents.contentsSet.itersymlinks" title="pkgcore.fs.contents.contentsSet.itersymlinks"><code class="xref py py-meth docutils literal notranslate"><span class="pre">itersymlinks()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.itersymlinks">
+<span class="sig-name descname"><span class="pre">itersymlinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.itersymlinks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.itersymlinks" title="Permalink to this definition">¶</a></dt>
+<dd><p>A generator yielding just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsSymlink" title="pkgcore.fs.fs.fsSymlink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsSymlink</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a fsSymlink instance,
+else yields just fsSymlink instances.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.links">
+<span class="sig-name descname"><span class="pre">links</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">a</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.links" title="Permalink to this definition">¶</a></dt>
+<dd><p>Method alias to invoke <a class="reference internal" href="#pkgcore.fs.contents.contentsSet.symlinks" title="pkgcore.fs.contents.contentsSet.symlinks"><code class="xref py py-meth docutils literal notranslate"><span class="pre">symlinks()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.map_directory_structure">
+<span class="sig-name descname"><span class="pre">map_directory_structure</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">add_conflicting_sym</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.map_directory_structure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.map_directory_structure" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve the directory structure between this instance, and another
+contentset, collapsing syms of self into directories of other.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.remove">
+<span class="sig-name descname"><span class="pre">remove</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.remove"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.remove" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.symlinks">
+<span class="sig-name descname"><span class="pre">symlinks</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">invert</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.symlinks"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.symlinks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of just <a class="reference internal" href="pkgcore.fs.fs.html#pkgcore.fs.fs.fsSymlink" title="pkgcore.fs.fs.fsSymlink"><code class="xref py py-obj docutils literal notranslate"><span class="pre">pkgcore.fs.fs.fsSymlink</span></code></a> instances.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>invert</strong> – if True, yield everything that isn’t a
+fsSymlink instance, else yields just fsSymlink.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.symmetric_difference">
+<span class="sig-name descname"><span class="pre">symmetric_difference</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.symmetric_difference"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.symmetric_difference" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.symmetric_difference_update">
+<span class="sig-name descname"><span class="pre">symmetric_difference_update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.symmetric_difference_update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.symmetric_difference_update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.union">
+<span class="sig-name descname"><span class="pre">union</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.union"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.union" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.contentsSet.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/pkgcore/fs/contents.html#contentsSet.update"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pkgcore.fs.contents.contentsSet.update" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pkgcore.fs.contents.offset_rewriter">
+<span class="sig-prename descclassname"><span class="pre">pkgcore.fs.contents.</span></span><span class="sig-name descname"><span class="pre">offset_rewriter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_offset</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iterable</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#pkgcore.fs.contents.offset_rewriter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">pkgcore.fs.contents module</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

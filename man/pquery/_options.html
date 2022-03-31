@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Base Options &#8212; pkgcore trunk documentation</title>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinxdoc.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Base Options</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="base-options">
+<h1>Base Options<a class="headerlink" href="#base-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option-list">
+<dt><kbd><span class="option">-h</span>, <span class="option">--help</span></kbd></dt>
+<dd><p>show this help message and exit</p>
+</dd>
+<dt><kbd><span class="option">--version</span></kbd></dt>
+<dd><p>show this program's version info and exit</p>
+</dd>
+<dt><kbd><span class="option">--debug</span></kbd></dt>
+<dd><p>enable debugging checks</p>
+</dd>
+<dt><kbd><span class="option">-q</span>, <span class="option">--quiet</span></kbd></dt>
+<dd><p>suppress non-error messages</p>
+</dd>
+<dt><kbd><span class="option">-v</span>, <span class="option">--verbose</span></kbd></dt>
+<dd><p>show verbose output</p>
+</dd>
+<dt><kbd><span class="option">--color <var>BOOLEAN</var></span></kbd></dt>
+<dd><p>enable/disable color support</p>
+</dd>
+</dl>
+</section>
+<section id="config-options">
+<h1>Config Options<a class="headerlink" href="#config-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option-list">
+<dt><kbd><span class="option">--config <var>CONFIG_PATH</var></span></kbd></dt>
+<dd><p>use custom config or skip loading system config</p>
+</dd>
+<dt><kbd><span class="option">--domain <var>DOMAIN</var></span></kbd></dt>
+<dd><p>custom pkgcore domain to use for this operation</p>
+</dd>
+</dl>
+</section>
+<section id="repository-matching-options">
+<h1>Repository Matching Options<a class="headerlink" href="#repository-matching-options" title="Permalink to this headline">¶</a></h1>
+<p>options controlling which repos to inspect</p>
+<dl class="option-list">
+<dt><kbd><span class="option">--raw</span></kbd></dt>
+<dd><p>disable configuration filtering</p>
+</dd>
+<dt><kbd><span class="option">--unfiltered</span></kbd></dt>
+<dd><p>disable all license and visibility filtering</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>--virtuals {only,disable}</dt><dd><p>only match virtuals or disable virtuals matching entirely</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">-r <var>REPO</var></span>, <span class="option">--repo <var>REPO</var></span></kbd></dt>
+<dd><p>repo to search (default from domain if omitted)</p>
+</dd>
+<dt><kbd><span class="option">-E</span>, <span class="option">--ebuild-repos</span></kbd></dt>
+<dd><p>search all ebuild repos</p>
+</dd>
+<dt><kbd><span class="option">-B</span>, <span class="option">--binary-repos</span></kbd></dt>
+<dd><p>search all binary repos</p>
+</dd>
+<dt><kbd><span class="option">-I</span>, <span class="option">--installed</span></kbd></dt>
+<dd><p>search installed packages</p>
+</dd>
+<dt><kbd><span class="option">-A</span>, <span class="option">--all-repos</span></kbd></dt>
+<dd><p>search all repos</p>
+</dd>
+</dl>
+</section>
+<section id="package-matching-options">
+<h1>Package Matching Options<a class="headerlink" href="#package-matching-options" title="Permalink to this headline">¶</a></h1>
+<dl class="simple">
+<dt>TARGET</dt><dd><p>extended atom matching of pkgs</p>
+</dd>
+</dl>
+<dl class="option-list">
+<dt><kbd><span class="option">--all</span></kbd></dt>
+<dd><p>match all packages</p>
+</dd>
+<dt><kbd><span class="option">--has-use <var>has_use</var></span></kbd></dt>
+<dd><p>exact string match on a USE flag</p>
+</dd>
+<dt><kbd><span class="option">--license <var>license</var></span></kbd></dt>
+<dd><p>exact match on a license</p>
+</dd>
+<dt><kbd><span class="option">--revdep <var>REVDEP</var></span></kbd></dt>
+<dd><p>shorthand for --restrict-revdep atom --print-revdep atom</p>
+</dd>
+<dt><kbd><span class="option">--revdep-pkgs <var>REVDEP_PKGS</var></span></kbd></dt>
+<dd><p>shorthand for --restrict-revdep-pkgs atom --print-revdep atom</p>
+</dd>
+<dt><kbd><span class="option">--restrict-revdep <var>restrict_revdep</var></span></kbd></dt>
+<dd><p>dependency on an atom</p>
+</dd>
+<dt><kbd><span class="option">--restrict-revdep-pkgs <var>restrict_revdep_pkgs</var></span></kbd></dt>
+<dd><p>dependency on pkgs that match a specific atom</p>
+</dd>
+<dt><kbd><span class="option">-S <var>description</var></span>, <span class="option">--description <var>description</var></span></kbd></dt>
+<dd><p>regexp search on description and longdescription</p>
+</dd>
+<dt><kbd><span class="option">--eapi <var>eapi</var></span></kbd></dt>
+<dd><p>match packages using a given EAPI</p>
+</dd>
+<dt><kbd><span class="option">--owns <var>owns</var></span></kbd></dt>
+<dd><p>exact match on an owned file/dir</p>
+</dd>
+<dt><kbd><span class="option">--owns-re <var>owns_re</var></span></kbd></dt>
+<dd><p>like &quot;owns&quot; but using a regexp for matching</p>
+</dd>
+<dt><kbd><span class="option">--maintainer <var>maintainer</var></span></kbd></dt>
+<dd><p>comma-separated list of regexes to search for maintainers</p>
+</dd>
+<dt><kbd><span class="option">--maintainer-name <var>maintainer_name</var></span></kbd></dt>
+<dd><p>comma-separated list of maintainer name regexes to search for</p>
+</dd>
+<dt><kbd><span class="option">--maintainer-email <var>maintainer_email</var></span></kbd></dt>
+<dd><p>comma-separated list of maintainer email regexes to search for</p>
+</dd>
+<dt><kbd><span class="option">--environment <var>environment</var></span></kbd></dt>
+<dd><p>regexp search in environment.bz2</p>
+</dd>
+<dt><kbd><span class="option">--pkgset <var>pkgset</var></span></kbd></dt>
+<dd><p>find packages that match the given package set (world for example)</p>
+</dd>
+<dt><kbd><span class="option">-u</span>, <span class="option">--upgrade</span></kbd></dt>
+<dd><p>match installed packages without best slotted version</p>
+</dd>
+</dl>
+</section>
+<section id="output-options">
+<h1>Output Options<a class="headerlink" href="#output-options" title="Permalink to this headline">¶</a></h1>
+<dl class="option-list">
+<dt><kbd><span class="option">-1</span>, <span class="option">--first</span></kbd></dt>
+<dd><p>stop when first match is found</p>
+</dd>
+<dt><kbd><span class="option">-a</span>, <span class="option">--atom</span></kbd></dt>
+<dd><p>print =cat/pkg-3 instead of cat/pkg-3.</p>
+</dd>
+<dt><kbd><span class="option">--cpv</span></kbd></dt>
+<dd><p>print the category/package-version</p>
+</dd>
+<dt><kbd><span class="option">-R</span></kbd></dt>
+<dd><p>print the repo of the package</p>
+</dd>
+<dt><kbd><span class="option">--slot</span></kbd></dt>
+<dd><p>print the slot of the package</p>
+</dd>
+<dt><kbd><span class="option">-n</span>, <span class="option">--no-version</span></kbd></dt>
+<dd><p>collapse multiple matching versions together</p>
+</dd>
+<dt><kbd><span class="option">--min</span></kbd></dt>
+<dd><p>show only the lowest version for each package</p>
+</dd>
+<dt><kbd><span class="option">--max</span></kbd></dt>
+<dd><p>show only the highest version for each package</p>
+</dd>
+<dt><kbd><span class="option">--blame</span></kbd></dt>
+<dd><p>shorthand for --attr maintainers</p>
+</dd>
+<dt><kbd><span class="option">--size</span></kbd></dt>
+<dd><p>display size of all files owned by the package</p>
+</dd>
+<dt><kbd><span class="option">--contents</span></kbd></dt>
+<dd><p>list files owned by the package</p>
+</dd>
+<dt><kbd><span class="option">--highlight-dep <var>HIGHLIGHT_DEP</var></span></kbd></dt>
+<dd><p>highlight dependencies matching this atom</p>
+</dd>
+<dt><kbd><span class="option">--print-revdep <var>PRINT_REVDEP</var></span></kbd></dt>
+<dd><p>print what condition(s) trigger a dep</p>
+</dd>
+<dt><kbd><span class="option">--attr <var>attribute</var></span></kbd></dt>
+<dd><p>print this attribute's value (can be specified more than once)</p>
+</dd>
+<dt><kbd><span class="option">--force-attr <var>attribute</var></span></kbd></dt>
+<dd><p>like --attr but accepts any string as attribute name instead of only explicitly supported names</p>
+</dd>
+<dt><kbd><span class="option">--one-attr <var>attribute</var></span></kbd></dt>
+<dd><p>print one attribute, suppresses other output</p>
+</dd>
+<dt><kbd><span class="option">--force-one-attr <var>attribute</var></span></kbd></dt>
+<dd><p>like --one-attr but accepts any string as attribute name instead of only explicitly supported names</p>
+</dd>
+</dl>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <div>
+    <h3><a href="../../index.html">Table of Contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">Base Options</a></li>
+<li><a class="reference internal" href="#config-options">Config Options</a></li>
+<li><a class="reference internal" href="#repository-matching-options">Repository Matching Options</a></li>
+<li><a class="reference internal" href="#package-matching-options">Package Matching Options</a></li>
+<li><a class="reference internal" href="#output-options">Output Options</a></li>
+</ul>
+
+  </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">pkgcore trunk documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Base Options</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2006-2019, pkgcore contributors.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>

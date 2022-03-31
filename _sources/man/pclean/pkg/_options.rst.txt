@@ -1,0 +1,71 @@
+Generic Cleaning Options
+------------------------
+
+TARGET                                        
+                                              packages to target for cleaning
+
+-p, --pretend                                 
+                                              dry run without performing any changes
+
+-x EXCLUDE, --exclude EXCLUDE                 
+                                              list of packages to exclude from removal
+
+-X EXCLUDE_FILE, --exclude-file EXCLUDE_FILE  
+                                              path to exclusion file
+
+-S PKGSET, --pkgsets PKGSET                   
+                                              list of pkgsets to include or exclude from removal
+
+File Cleaning Options
+---------------------
+
+-m TIME, --modified TIME  
+                          skip files that have been modified since a given time
+
+-s SIZE, --size SIZE      
+                          skip files bigger than a given size
+
+Repo Cleaning Options
+---------------------
+
+-I, --installed         
+                        skip files for packages that are currently installed
+
+-E, --exists            
+                        skip files for packages that relate to ebuilds in the tree
+
+-f, --fetch-restricted  
+                        skip fetch-restricted files
+
+-r REPO, --repo REPO    
+                        target repository
+
+Binpkg Cleaning Options
+-----------------------
+
+--source-repo REPO             
+                               remove binpkgs with matching source repo
+
+-b, --bindist                  
+                               only remove binpkgs that restrict distribution
+
+-c CHANGED, --changed CHANGED  
+                               comma separated list of package attributes to check for ebuild changes
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

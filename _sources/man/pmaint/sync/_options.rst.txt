@@ -1,0 +1,29 @@
+Positional Arguments
+--------------------
+
+:repo:  
+      repo(s) to sync
+
+Options
+-------
+
+-f, --force  
+             force syncing to occur regardless of staleness checks
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support

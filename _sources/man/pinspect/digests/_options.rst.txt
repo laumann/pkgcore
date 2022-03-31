@@ -1,0 +1,29 @@
+Positional Arguments
+--------------------
+
+:repos:  
+       repo to inspect
+
+Base Options
+------------
+
+-h, --help       
+                 show this help message and exit
+
+--debug          
+                 enable debugging checks
+
+-q, --quiet      
+                 suppress non-error messages
+
+-v, --verbose    
+                 show verbose output
+
+--color BOOLEAN  
+                 enable/disable color support
+
+Config Options
+--------------
+
+--domain DOMAIN  
+                 custom pkgcore domain to use for this operation
